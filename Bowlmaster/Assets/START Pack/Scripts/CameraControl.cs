@@ -19,6 +19,8 @@ public class CameraControl : MonoBehaviour {
     void Update () {
         //Set the position of the camera's transform to be the same as
         //player's, but offset by the calculated offset distance.
-        transform.position = ball.transform.position + offset;
+        if (transform.position.z <= 1829f) { //In front of head pin
+            transform.position = ball.transform.position + offset;
+        }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent (typeof(Ball))]
-public class NewBehaviourScript : MonoBehaviour {
+public class DragLaunch : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

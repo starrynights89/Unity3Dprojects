@@ -2,26 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ball : MonoBehaviour {
-    public Vector3 launchVelocity;
-    //public bool inPlay = false;
+public class Ball : MonoBehaviour
+{
 
-    private Vector3 ballStartPos;
+    public Vector3 launchVelocity;
+
     private Rigidbody rigidBody;
     private AudioSource audioSource;
-	// Use this for initialization
-	void Start ()
+
+    // Use this for initialization
+    void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         rigidBody.useGravity = false;
-        //ballStartPos = transform.position;
-        Launch();
     }
 
     public void Launch(Vector3 velocity)
     {
-        //inPlay = true;
-
         rigidBody.useGravity = true;
         rigidBody.velocity = velocity;
 
